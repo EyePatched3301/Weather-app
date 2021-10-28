@@ -5,11 +5,8 @@ body {
     align-content: center;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin-top: 20%;
-    margin-bottom: 20%;
     background-image: url(https://source.unsplash.com/1600x900/?landscape);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-size: cover;
 }
 .container {
@@ -20,7 +17,7 @@ body {
     background: rgb(7 7 7 / 84%);
     border-radius: 15px;
     width: 100%;
-    max-width: 480px;
+    margin: 10rem;
     
 }
 .search {
