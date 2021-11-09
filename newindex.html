@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
@@ -27,6 +28,7 @@
         <div class="content">
             <div class="locationAndTemperature">
                 <div class="location">Lucknow</div>
+                <p id="date"></p>
                 <div class="temperature">
                     <h1>15° C </h1>
                 </div>
@@ -66,6 +68,69 @@
             </div>
         </div>
     </div>
+    <script>
+      const curDate = document.getElementById("date");
+      let weathercon = document.getElementById("weathercon");
+
+      const termpStatus = "clouds";
+      const getCureentDay = () => {
+        var weekday = new Array(7);
+        weekday[0]="Sun";
+        weekday[1]="Mon";
+        weekday[2]="Tues";
+        weekday[4]="Wed";
+        weekday[4]="Thurs";
+        weekday[5] ="Fri";
+        weekday[6]="Sat";
+
+        
+       let currentTime = new Date();
+       let day = (weekday[currentTime.getDay()]);
+       return day;
+      };
+
+      const getCureentTime = () => {
+
+        var  months= [
+         "January", 
+         "February", 
+         "March", 
+         "April", 
+         "May", 
+         "June", 
+         "July", 
+         "August",
+         "September",
+         "October",
+         "November", 
+         "December",
+      ];
+
+        var now = new Date();
+        var month = months[now.getMonth() +1];
+        var date = now.getDate();
+        var year = now.getFullYear();
+        
+        let hours = now.getHours();
+        let mins = now.getMinutes();
+
+        let periods = "AM";
+        if (hours>11)
+        {
+          periods= "PM";
+          if(hours>12)
+             hours -= 12;
+        }
+        if(mins<10)
+        {
+          mins ="0"+ mins;
+        }
+
+        return `${month}${date} | ${hours}:${mins}:${periods}`
+       
+      };
+      curDate.innerHTML = getCureentDay() +" | " + getCureentTime();
+    </script>
 </body>
 
 </html>
