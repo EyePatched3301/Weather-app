@@ -93,3 +93,7 @@ table{
     flex-direction: column;
     justify-content: center;
 }
+img{
+    height: 40px;
+    width: 40px;
+}
