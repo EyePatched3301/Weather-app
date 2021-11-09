@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+input[type="search"] {
+    border: none;
+    background: #000000ab;
+    border-radius: 30px;
+    height: 3em;
+    width: 20em;
+}
+button {
+    border: none;
+    border-radius: 10em;
+    height: 3em;
+    width: 3em;
+}
+.search {
+    padding: 10px;
+}
+.prediction {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(https://source.unsplash.com/1600x900/?landscape);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    color: white !important;
+}
+.locationAndTemperature{
+    padding: 10px;
+    background: rgb(7 7 7 / 84%);
+}
+.windHumidityPressure{
+    padding: 10px;
+    background: rgb(7 7 7 / 84%);
+}
