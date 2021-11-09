@@ -19,6 +19,8 @@ input[type="search"] {
     border-radius: 30px;
     height: 3em;
     width: 20em;
+    padding: 1em;
+    color: white;
 }
 
 button {
@@ -52,7 +54,7 @@ body {
 
 
 .locationAndTemperature {
-    width: 10em;
+    width: 14em;
     padding: 10px;
     background: rgb(7 7 7 / 84%);
     padding: 20px;
@@ -62,7 +64,7 @@ body {
 .windHumidityPressure {
     padding: 10px;
     background: rgb(7 7 7 / 84%);
-    /* height: 100%; */
+    width: 13em;
     padding-top: 70px;
     padding-bottom: 55px;
     border-radius: 20px;
@@ -79,5 +81,5 @@ body {
     margin: 5px;
     border-radius: 20px;
     padding: 5px;
-    height: 7em;
+    height: 6em;
 }
